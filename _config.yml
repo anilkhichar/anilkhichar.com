@@ -9,7 +9,7 @@ google_analytics: 'UA-46278016-1'
 disqus: 'anilkhichar-com'
 include: ["_pages"]
 permalink: /:title/
-destination: ../../app/hianil.github.io/
+destination: ../../app/anilkhichar.com/
 
 # Authors
 authors:
