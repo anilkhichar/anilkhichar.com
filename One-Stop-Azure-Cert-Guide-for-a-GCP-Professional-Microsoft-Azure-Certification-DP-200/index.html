@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="icon" href="/assets/images/logo.png">
+
+<title>One-Stop Azure Cert Guide for a GCP Professional: Microsoft Azure Certification DP-200: Implementing an Azure Data Solution | Anil Khichar</title>
+
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>One-Stop Azure Cert Guide for a GCP Professional: Microsoft Azure Certification DP-200: Implementing an Azure Data Solution | Hands on Coding</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="One-Stop Azure Cert Guide for a GCP Professional: Microsoft Azure Certification DP-200: Implementing an Azure Data Solution" />
+<meta name="author" content="anil" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="As a Technical Architect at MediaAgility, I refined my approach to designing new customer solutions for large enterprises, and I got more…" />
+<meta property="og:description" content="As a Technical Architect at MediaAgility, I refined my approach to designing new customer solutions for large enterprises, and I got more…" />
+<meta property="og:site_name" content="Hands on Coding" />
+<meta property="og:image" content="/assets/images/azure_certified.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-03-04T00:00:00-05:00" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"anil"},"url":"/One-Stop-Azure-Cert-Guide-for-a-GCP-Professional-Microsoft-Azure-Certification-DP-200/","image":"/assets/images/azure_certified.png","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/assets/images/logo.png"},"name":"anil"},"headline":"One-Stop Azure Cert Guide for a GCP Professional: Microsoft Azure Certification DP-200: Implementing an Azure Data Solution","dateModified":"2020-03-04T00:00:00-05:00","datePublished":"2020-03-04T00:00:00-05:00","description":"As a Technical Architect at MediaAgility, I refined my approach to designing new customer solutions for large enterprises, and I got more…","mainEntityOfPage":{"@type":"WebPage","@id":"/One-Stop-Azure-Cert-Guide-for-a-GCP-Professional-Microsoft-Azure-Certification-DP-200/"},"@type":"BlogPosting","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+<link href="/assets/css/screen.css" rel="stylesheet">
+
+<link href="/assets/css/main.css" rel="stylesheet">
+
+<script src="/assets/js/jquery.min.js"></script>
+
+<script src="https://apis.google.com/js/platform.js"></script>
+
+</head>
+
+
+
+
+<body class="layout-post">
+	<!-- defer loading of font and font awesome -->
+	<noscript id="deferred-styles">
+		<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	</noscript>
+
+
+<!-- Begin Menu Navigation
+================================================== -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+
+    <div class="container pr-0">
+
+    <!-- Begin Logo -->
+    <a class="navbar-brand" href="/">
+    <img src="/assets/images/logo.png" alt="Anil Khichar">
+    </a>
+    <!-- End Logo -->
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMediumish">
+
+        <!-- Begin Menu -->
+
+            <ul class="navbar-nav ml-auto">
+
+                
+                <li class="nav-item">
+                
+                <a class="nav-link" href="/index.html">Blog</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/videos">Videos</a>
+                </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+                </li>
+
+                <li class="nav-item">
+                <a target="_blank" class="nav-link" href="https://github.com/hianil/anilkhichar.com"><i class="fab fa-github"></i> Fork on Github</a>
+                </li>
+
+                <script src="/assets/js/lunr.js"></script>
+
+
+<style>
+    .lunrsearchresult .title {color: #d9230f;}
+    .lunrsearchresult .url {color: silver;}
+    .lunrsearchresult a {display: block; color: #777;}
+    .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
+    .lunrsearchresult a:hover .title {text-decoration: underline;}
+    .bd-search {margin-top: 0.7em;}
+</style>
+
+<form class="bd-search" onSubmit="return lunr_search(document.getElementById('lunrsearch').value);">
+    <input type="text" class="form-control text-small launch-modal-search" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Type and enter..."/>
+</form>
+
+<div id="lunrsearchresults">
+    <ul></ul>
+</div>
+
+<script src="/assets/js/lunrsearchengine.js"></script>
+
+            </ul>
+
+        <!-- End Menu -->
+
+    </div>
+
+    </div>
+</nav>
+<!-- End Navigation
+================================================== -->
+
+<div class="site-content">
+
+<div class="container">
+
+<!-- Site Title
+================================================== -->
+<div class="mainheading">
+    <h1 class="sitetitle">Anil Khichar</h1>
+    <p class="lead">
+        Principal Technical Architect (6X GCP/5X Azure)
+    </p>
+</div>
+
+<!-- Content
+================================================== -->
+<div class="main-content">
+    <!-- Begin Article
+================================================== -->
+<div class="container">
+    <div class="row">
+
+        <!-- Post Share -->
+        <div class="col-md-2 pl-0">
+            <div class="share sticky-top sticky-top-offset">
+    <p>
+        Share
+    </p>
+    <ul>
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://twitter.com/intent/tweet?text=One-Stop Azure Cert Guide for a GCP Professional: Microsoft Azure Certification DP-200: Implementing an Azure Data Solution&url=/One-Stop-Azure-Cert-Guide-for-a-GCP-Professional-Microsoft-Azure-Certification-DP-200/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </li>
+
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://facebook.com/sharer.php?u=/One-Stop-Azure-Cert-Guide-for-a-GCP-Professional-Microsoft-Azure-Certification-DP-200/" onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </li>
+
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=/One-Stop-Azure-Cert-Guide-for-a-GCP-Professional-Microsoft-Azure-Certification-DP-200/" onclick="window.open(this.href, 'width=550,height=435');return false;">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </li>
+
+    </ul>
+    
+    <div class="sep">
+    </div>
+    <ul>
+        <li>
+        <a class="small smoothscroll" href="#disqus_thread"></a>
+        </li>
+    </ul>
+    
+</div>
+
+        </div>
+
+        <!-- Post -->
+        
+
+        <div class="col-md-9 flex-first flex-md-unordered">
+            <div class="mainheading">
+
+                <!-- Author Box -->
+                
+                <div class="row post-top-meta">
+                    <div class="col-xs-12 col-md-3 col-lg-2 text-center text-md-left mb-4 mb-md-0">
+                        
+                        <img class="author-thumb" src="https://www.gravatar.com/avatar/b7532bbdbaa60251fee877586769cc3a?s=250&d=mm&r=x" alt="Anil Khichar">
+                        
+                    </div>
+                    <div class="col-xs-12 col-md-9 col-lg-10 text-center text-md-left">
+                        <a target="_blank" class="link-dark" href="https://anilkhichar.com">Anil Khichar</a>
+                        <a target="_blank" href="https://www.linkedin.com/in/anilkhichar" class="btn follow">Follow</a>
+                        <div><span class="author-description">Principal Technical Architect</span></div>
+                        <!-- Post Date -->
+                        <p>
+                            <small>
+                            <span class="post-date"><time class="post-date" datetime="2020-03-04">04 Mar 2020</time></span>           
+                            
+                            </small>
+                        </p>
+                    </div>
+                    
+                </div>
+                
+
+                <!-- Post Title -->
+                <h1 class="posttitle">One-Stop Azure Cert Guide for a GCP Professional: Microsoft Azure Certification DP-200: Implementing an Azure Data Solution</h1>
+
+            </div>
+
+            <!-- Adsense if enabled from _config.yml (change your pub id and slot) -->
+            
+            <!-- End Adsense -->
+
+            <!-- Post Featured Image -->
+            
+            
+            
+            <figure class="figure-caption">
+            
+            <img class="featured-image img-fluid" src="/assets/images/azure_certified.png" alt="One-Stop Azure Cert Guide for a GCP Professional: Microsoft Azure Certification DP-200: Implementing an Azure Data Solution">
+            
+            <figcaption>
+                
+                
+                <a href="https://azure.microsoft.com/en-us/blog/lambda-architecture-using-azure-cosmosdb-faster-performance-low-tco-low-devops/" target="_blank">
+                    <Image courtesy: Lambda Architecture using Azure
+                </a>
+                
+                Image courtesy: Lambda Architecture using Azure
+            </figcaption>
+            </figure>
+            
+            
+            <!-- End Featured Image -->
+            
+
+            <!-- Post Content -->
+            <div class="article-post">
+                <!-- Toc if any -->
+                
+                <!-- End Toc -->
+                <p>As a Technical Architect at <a href="https://www.mediaagility.com/">MediaAgility</a>, I refined my approach to designing new customer solutions for large enterprises, and I got more inclined to learning, not just studying and memorizing.</p>
+
+<p><strong>Why I chose Azure Learning:</strong></p>
+
+<p>In the last two years, I designed GCP solutions for almost five enterprises and the common fact was, every enterprise was using/(willing to use) a hybrid cloud strategy regardless of their industry &amp; service. And the compelling reason was no-vendor locking &amp; utilize the best services across cloud providers and stay in the front line of their competition.</p>
+
+<p>I am extensively working on GCP but at the same time taking care of Azure &amp; AWS intersections. After completing <a href="https://medium.com/@khichar.anil/my-6x-google-cloud-certification-journey-dfca1abdaacc">My 6X Google Cloud Certification Journey</a>, I decided to start with Azure to gain more in-depth knowledge.</p>
+
+<h3 id="dp-200-journey">DP-200 Journey:</h3>
+
+<p><strong>Brief:</strong></p>
+
+<p>At the start of 2019, Microsoft released two Azure Data exams: <a href="https://www.microsoft.com/en-us/learning/exam-DP-200.aspx">Implementing an Azure Data Solution</a> (DP-200) and <a href="https://www.microsoft.com/en-us/learning/exam-DP-201.aspx">Designing an Azure Data Solution</a> (DP-201). If you pass <em>both</em> of these exams, you become a Microsoft Certified <a href="https://www.microsoft.com/en-us/learning/azure-data-engineer.aspx">Azure Data Engineer Associate</a>.</p>
+
+<figure class="figure-caption">
+  
+  <img class="featured-image img-fluid" src="/assets/images/dp-200-cert.png" alt="" />
+  
+  <figcaption>
+      <a href="" target="_blank">
+      </a>
+    At the end of 2019 I started learning Azure and on January 4th, 2020, I got recognition as a <strong>Microsoft Certified: Azure Data Engineer Associate.!!</strong>
+  </figcaption>
+</figure>
+
+<h3 id="steps"><strong>Steps:</strong></h3>
+
+<ol>
+  <li><strong>Reverse engineering</strong> <a href="https://cloud.google.com/docs/compare/azure">Google Cloud for Azure professionals</a>: This guide compares Google Cloud with Azure and highlights the similarities and differences between the two. In addition, the guide provides quick-reference mappings of Azure products, concepts, and terminology to the corresponding products, concepts, and terminology on Google Cloud.</li>
+  <li><a href="https://docs.microsoft.com/en-us/learn/certifications/exams/dp-200?wt.mc_id=learningredirect_certs-web-wwl"><strong>Gold</strong></a> <strong>content at Microsoft learning path:</strong> In my opinion, this is the best learning resource of all. The estimated total time for all of the following modules was around <strong>30 hours</strong>. However, I ended up around <strong>100 hours</strong> to cover hands-on experiments<strong>.</strong></li>
+</ol>
+
+<ul>
+  <li><a href="https://docs.microsoft.com/learn/paths/azure-for-the-data-engineer/">Azure</a> for the Data Engineer</li>
+  <li><a href="https://docs.microsoft.com/learn/paths/store-data-in-azure/">Store</a> data in Azure</li>
+  <li><a href="https://docs.microsoft.com/learn/paths/work-with-relational-data-in-azure/">Work</a> with relational data in Azure</li>
+  <li><a href="https://docs.microsoft.com/learn/paths/work-with-nosql-data-in-azure-cosmos-db/">Work</a> with NoSQL data in Azure Cosmos DB</li>
+  <li><a href="https://docs.microsoft.com/learn/paths/data-processing-with-azure-adls/">Large</a> Scale Data Processing with Azure Data Lake Storage Gen2</li>
+  <li><a href="https://docs.microsoft.com/learn/paths/implement-data-streaming-with-asa/">Implement</a> a Data Streaming Solution with Azure Streaming Analytics</li>
+  <li><a href="https://docs.microsoft.com/learn/paths/implement-sql-data-warehouse/">Implement</a> a Data Warehouse with Azure Synapse Analytics</li>
+  <li><a href="https://docs.microsoft.com/learn/paths/data-engineering-with-databricks/">Perform</a> data engineering with Azure Databricks</li>
+  <li><a href="https://docs.microsoft.com/learn/paths/data-science/">Extract</a> knowledge and insights from your data with Azure Databricks</li>
+</ul>
+
+<figure class="figure-caption">
+  
+  <img class="featured-image img-fluid" src="/assets/images/dp-200-cert-bookmark.png" alt="" />
+  
+  <figcaption>
+      <a href="" target="_blank">
+      </a>
+    My personalized bookmark list, out of this long learning path :)
+  </figcaption>
+</figure>
+
+<p>3. <strong>Notes</strong>: I took some useful notes in Evernote which I need to consolidate and share in a public Git Repo. If anyone is interested, then please write in the comments below or find me on <a href="https://www.linkedin.com/in/anilkhichar/">LinkedIn</a>.</p>
+
+<p>4. <strong>Must-read content:</strong> This was my revision list which can make you the winner if you were about to lose the nearline race. If you are well prepared and wants to cover last day content, here it is:</p>
+
+<blockquote>
+  <p>4.a. Implement Data Storage Solutions:</p>
+</blockquote>
+
+<blockquote>
+  <p><em>CosmosDB</em></p>
+</blockquote>
+
+<ol>
+  <li>Understand CosmosDB <a href="https://docs.microsoft.com/en-us/azure/cosmos-db/use-cases">use cases</a>.</li>
+  <li>It’s really important to know the <a href="https://docs.microsoft.com/en-us/learn/modules/choose-api-for-cosmos-db/3-analyze-the-decision-criteria">decision criteria</a> for CosmosDB APIs.</li>
+  <li>Deep dive into Cosmos DB <a href="https://azure.microsoft.com/en-us/blog/azure-cosmos-db-partitioning-design-patterns-part-1/">partitioning</a> and learn about query performance tuning like deciding the partitioning key, creating lookup collection, etc.</li>
+  <li>Perceive the intended meaning of Cosmos DB <a href="https://docs.microsoft.com/en-us/azure/cosmos-db/request-units">request units</a>(RUs) so that you can save the cost and estimate the amount of RU for a particular workload.</li>
+  <li>Implement a <a href="https://docs.microsoft.com/en-us/azure/cosmos-db/lambda-architecture">lambda architecture</a> on the Azure platform. Get a clear understanding of which service to use while following this approach like Apache Spark vs Apache Hadoop etc.</li>
+  <li>Understand <a href="https://hadoop.apache.org/docs/r1.2.1/hdfs_design.html#NameNode+and+DataNodes">HDFS architecture</a> and get a clear understanding and use cases about Primary, Secondary, NameNode &amp; DataNode.</li>
+</ol>
+
+<blockquote>
+  <p><em>Storage</em></p>
+</blockquote>
+
+<ol>
+  <li>Manage the Azure Blob <a href="https://docs.microsoft.com/en-us/azure/storage/blobs/storage-lifecycle-management-concepts?tabs=azure-portal">storage lifecycle</a>. Experiment the mentioned example in this post about applying a lifecycle policy. <strong><em>hands-on</em></strong></li>
+  <li>Learn about <a href="https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-access-control">Access control</a> in Azure Data Lake Storage Gen2. Pay special attention to Azure AD setup while applying ACLs. <strong><em>hands-on</em></strong></li>
+  <li>Configure Azure <a href="https://docs.microsoft.com/en-us/azure/storage/common/storage-network-security">Storage firewalls</a> and virtual networks. <strong><em>hands-on</em></strong></li>
+</ol>
+
+<blockquote>
+  <p><em>Azure SQL Server &amp; SQL Server Data Warehouse (Synapse Analytics)</em></p>
+</blockquote>
+
+<ol>
+  <li><a href="https://docs.microsoft.com/en-us/azure/sql-database/sql-database-paas-vs-sql-server-iaas">Which SQL</a> option should I choose?</li>
+  <li><a href="https://docs.microsoft.com/en-us/azure/sql-database/sql-database-export">Export</a> an Azure SQL database to a BACPAC file. <strong><em>hands-on</em></strong></li>
+  <li>Learn about how to secure sensitive data in a SQL database with database encryption by using the <a href="https://docs.microsoft.com/en-us/azure/sql-database/sql-database-always-encrypted">Always Encrypted</a> wizard. <strong><em>hands-on</em></strong></li>
+  <li>Experience Azure SQL Database <a href="https://docs.microsoft.com/en-us/azure/sql-database/sql-database-threat-detection">Advanced Threat Protection</a> features &amp; steps to enable it. <strong><em>hands-on</em></strong></li>
+  <li>Experiment and enable <a href="https://docs.microsoft.com/en-us/sql/t-sql/statements/create-external-file-format-transact-sql?view=sql-server-ver15">TDE</a> (Transparent Data Encryption) and keep a note on the steps: <em>Formula(memory trick)</em>: MCED — Master Key, Certificate, Encryption &amp; Apply encryption on the DB. <strong><em>hands-on</em></strong></li>
+  <li>Do an experiment using <a href="https://docs.microsoft.com/en-us/azure/sql-database/scripts/sql-database-create-and-configure-database-powershell">Powershell</a> &amp; Azure <a href="https://docs.microsoft.com/en-us/azure/cosmos-db/scripts/cli/sql/create">cloud shell</a>. <strong><em>hands-on</em></strong></li>
+  <li><a href="https://docs.microsoft.com/en-us/azure/sql-database/sql-database-firewall-configure">IP firewall</a> rules. <strong><em>hands-on</em></strong></li>
+  <li>Read about <a href="https://docs.microsoft.com/en-us/azure/sql-database/sql-database-dynamic-data-masking-get-started">dynamic data masking</a> for Azure SQL Database and Azure Synapse Analytics. Give special attention to the in-built masking functions &amp; their appropriate usages (Default, Credit Card, Email, Random Number, Custom Text)</li>
+  <li><strong><em>Polybase</em></strong>: Please execute this <a href="https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store">hands-on experiment</a> multiple times to load the data from ADLS into WH and memorize all the steps in the correct sequence. <em>Formula(Memory trick):</em> MCSFTL — Master, Credential, Source, File, Table, Load(CTAS). <a href="https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/sql-data-warehouse/load-data-from-azure-blob-storage-using-polybase.md">Load New York Taxicab dataset</a> <strong><em>hands-on</em></strong></li>
+  <li>DW performance <a href="https://docs.microsoft.com/en-us/archive/blogs/apsblog/azure-sql-dw-performance-ctaspartition-switching-vs-updatedelete">benchmarking</a>: This example demonstrates DW performance benchmarking and concluded to utilize a methodology of CTAS and partition switching in lieu of UPDATE and DELETE operations wherever possible. Get a full understanding of this fundamental approach. <strong><em>hands-on</em></strong></li>
+</ol>
+
+<blockquote>
+  <p>4.b. Manage and develop data processing:</p>
+</blockquote>
+
+<blockquote>
+  <p><em>Azure Data Factory</em></p>
+</blockquote>
+
+<ol>
+  <li>Understand the difference between all the available <a href="https://docs.microsoft.com/en-us/azure/data-factory/concepts-integration-runtime">Integration runtime</a>. Pay special attention to the self-hosted integration runtime.</li>
+  <li>Azure Data Factory Copy Activity: Find out <a href="https://docs.microsoft.com/en-us/azure/data-factory/copy-activity-schema-and-type-mapping">schema mapping</a> ways between source &amp; sink. <strong><em>hands-on</em></strong></li>
+</ol>
+
+<blockquote>
+  <p><em>Storage &amp; HDInsight</em></p>
+</blockquote>
+
+<ol>
+  <li>Get in-depth knowledge of using Azure Data Lake Storage Gen2 for big data requirements. Also, learn about different <a href="https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-data-scenarios">Hadoop tools</a> discussed in this article.</li>
+  <li>Choose the correct <a href="https://docs.microsoft.com/en-us/learn/modules/hdinsight-config-open-source-solution/index">HDInsight Configuration</a> to build open-source analytics solutions. Give special attention to the use cases and get a better understanding of when to use Storm vs Spark etc.</li>
+</ol>
+
+<blockquote>
+  <p><em>Azure Databricks</em></p>
+</blockquote>
+
+<ol>
+  <li>Learn about the technology <a href="https://docs.microsoft.com/en-us/azure/architecture/data-guide/technology-choices/batch-processing">choices for batch processing</a> and what is the decision criteria to choose one over the others.</li>
+  <li>ETL using Azure <a href="https://docs.microsoft.com/en-us/azure/azure-databricks/databricks-extract-load-sql-data-warehouse#load-data-into-azure-sql-data-warehouse">Databricks</a>. Special attention to “Load data into Azure SQL Data Warehouse” <strong><em>hands-on</em></strong></li>
+  <li>Experiment on different <a href="https://docs.microsoft.com/en-us/azure/databricks/clusters/configure">cluster configurations</a>. <strong><em>hands-on</em></strong></li>
+</ol>
+
+<blockquote>
+  <p><em>Azure Stream Analytics</em></p>
+</blockquote>
+
+<ol>
+  <li><a href="https://docs.microsoft.com/en-us/azure/stream-analytics/stream-analytics-window-functions">Window functions</a>: You must know the practical difference between all the stream analytics windowing functions &amp; their usage (Tumbling, Hopping, Sliding &amp; Session windows). <strong><em>hands-on</em></strong></li>
+  <li>Learn how to use <a href="https://docs.microsoft.com/en-us/azure/stream-analytics/stream-analytics-use-reference-data">lookup data</a> in the Azure Stream Analytics in a data streaming pipeline. <strong><em>hands-on</em></strong></li>
+  <li>Azure Stream Analytics on <a href="https://docs.microsoft.com/en-us/azure/stream-analytics/stream-analytics-edge">IoT Edge</a></li>
+</ol>
+
+<blockquote>
+  <p>4.c. Monitor and optimize data solutions:</p>
+</blockquote>
+
+<ol>
+  <li>Understand the <a href="https://docs.microsoft.com/en-us/azure/sql-database/sql-database-auditing">SQL auditing</a> features &amp; do a hand-on experiment on who/when &amp; what got accessed from the Azure SQL DB &amp; WH? <strong><em>hands-on</em></strong></li>
+  <li>Learn about enabling SQL server <a href="https://docs.microsoft.com/en-us/azure/sql-database/sql-database-automatic-tuning-enable">automatic tuning</a> &amp; give special attention towards the inheritance with tuning options like <em>Force Plan, Create Index &amp; Drop Index.</em> <strong><em>hands-on</em></strong></li>
+  <li>Read &amp; understand <a href="https://docs.microsoft.com/en-us/azure/sql-database/sql-database-in-memory">In-Memory</a> technologies that improve performance without increasing the database service tier. <strong><em>hands-on</em></strong></li>
+  <li>Understand the <a href="https://docs.microsoft.com/en-us/azure/architecture/patterns/materialized-view">materialized view</a> design pattern and think about its uses to boost a slow-performing SQL query. <strong><em>hands-on</em></strong></li>
+  <li>Learn how to enable and configure l<a href="https://docs.microsoft.com/en-us/azure/sql-database/sql-database-metrics-diag-logging">ogging of diagnostics</a> telemetry for Azure SQL databases. Pay special attention to the metric storage options like Azure SQL Analytics, Azure Event Hubs &amp; Azure Storage. <strong><em>hands-on</em></strong></li>
+  <li>Imbibe <a href="https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-performance-tuning-guidance">ADLS Gen2 performance optimization</a> techniques. Understand file sizing &amp; data organization into folders.</li>
+  <li>Discover <a href="https://docs.microsoft.com/en-us/azure/data-factory/monitor-using-azure-monitor">Azure data factory monitoring</a> using Azure monitor and think about use cases like last quarter log analytics and find out different actionable trends. <strong><em>hands-on</em></strong></li>
+  <li>Learn about <a href="https://docs.microsoft.com/en-us/data-integration/gateway/service-gateway-high-availability-clusters">on-premises HA data gateway</a> cluster to avoid single points of failure and to load balance traffic across gateways in a cluster.</li>
+  <li>Understand the use of Azure Log Analytics to <a href="https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-oms-log-analytics-tutorial">monitor HDInsight</a> clusters. Pay special attention to “Install HDInsight cluster management solutions”. <strong><em>hands-on</em></strong></li>
+</ol>
+
+<p>…</p>
+
+<p>Core mantra has to be: <strong>Never target for certification, rather understand the platform &amp; technology</strong>, because this will help us to design better solutions for our customers and perform our work in a qualitative manner. These are the perks of being a lifelong learner.</p>
+
+<p>In this post, I shared all the resources that I found and used. <strong>Always check the latest official information from Microsoft before your exam.</strong></p>
+
+<p>Prepare well and all the best for the exam!</p>
+
+            </div>
+
+            <!-- Rating -->
+            
+            <div class="rating mb-4 d-flex align-items-center">
+                <strong class="mr-1">Rating:</strong> <div class="rating-holder">
+<div class="c-rating c-rating--regular" data-rating-value="5">
+  <button>1</button>
+  <button>2</button>
+  <button>3</button>
+  <button>4</button>
+  <button>5</button>
+</div>
+</div>
+            </div>
+            
+
+            <!-- Post Date -->
+            <p>
+                <small>
+                <span class="post-date"><time class="post-date" datetime="2020-03-04">04 Mar 2020</time></span>           
+                
+                </small>
+            </p>
+
+            <!-- Post Categories -->
+            <div class="after-post-cats">
+                <ul class="tags mb-4">
+                    
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#Azure">Azure</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#Certification">Certification</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#Cloud">Cloud</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#DP-200">DP-200</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#Technology">Technology</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- End Categories -->
+
+            <!-- Post Tags -->
+            <div class="after-post-tags">
+                <ul class="tags">
+                    
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#Azure-Certification">#Azure Certification</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#Certification">#Certification</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#Cloud">#Cloud</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#Cloud-Certification">#Cloud Certification</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#Lifelong-Learning">#Lifelong Learning</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- End Tags -->
+
+            <!-- Prev/Next -->
+            <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
+            
+            <a class="prev d-block col-md-6" href="//My-6X-Google-Cloud-Certification-Journey/"> &laquo; My 6X Google Cloud Certification Journey</a>
+            
+            
+            <a class="next d-block col-md-6 text-lg-right" href="//Now-Google-BigQuery-is-truly-enterprise-ready-DW-DML-without-limits-Integer-range-partitioning/">Now Google BigQuery is truly enterprise-ready DW (DML without limits; Integer range partitioning) &raquo; </a>
+            
+            <div class="clearfix"></div>
+            </div>
+            <!-- End Categories -->
+
+        </div>
+        <!-- End Post -->
+
+    </div>
+</div>
+<!-- End Article
+================================================== -->
+
+<!-- Begin Comments
+================================================== -->
+
+    <div class="container">
+        <div id="comments" class="row justify-content-center mb-5">
+            <div class="col-md-8">
+                <section class="disqus">
+    <div id="disqus_thread"></div>
+    <script>
+        /**
+        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+        /*
+        var disqus_config = function () {
+        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        */
+        var disqus_shortname = 'anilkhichar-com'; 
+        var disqus_developer = 0;
+        (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = window.location.protocol + '//' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+            </div>
+        </div>
+    </div>
+
+<!--End Comments
+================================================== -->
+
+<!-- Review with LD-JSON, adapt it for your needs if you like, but make sure you test the generated HTML source code first: 
+https://search.google.com/structured-data/testing-tool/u/0/
+================================================== -->
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org/",
+  "@type": "Review",
+  "itemReviewed": {
+    "@type": "Thing",
+    "name": "One-Stop Azure Cert Guide for a GCP Professional: Microsoft Azure Certification DP-200: Implementing an Azure Data Solution"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Anil Khichar"
+  },
+  "datePublished": "2020-03-04",
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "5",
+    "bestRating": "5"
+  }
+}
+</script>
+
+</div>
+
+<!-- Bottom Alert Bar
+================================================== -->
+<div class="alertbar">
+	<div class="container text-center bottom-log">
+        <span>Never miss a <b>story</b>, subscribe to my YouTube channel &nbsp;
+            <a href="https://www.youtube.com/channel/UCGGdRyg-737KtGisFe4cMTw" target="_blank">
+                <img src="/assets/images/youtube.png" alt="Hands on Coding">
+            </a>
+        </span>
+    </div>
+</div>
+    
+</div>
+
+<!-- Categories Jumbotron
+================================================== -->
+<div class="jumbotron fortags">
+	<div class="d-md-flex h-100">
+		<div class="col-md-4 transpdark align-self-center text-center h-100">
+            <div class="d-md-flex align-items-center justify-content-center h-100">
+                <h2 class="d-md-block align-self-center py-1 font-weight-light">Explore <span class="d-none d-md-inline">→</span></h2>
+            </div>
+		</div>
+		<div class="col-md-8 p-5 align-self-center text-center">
+            
+            
+                
+                    <a class="mt-1 mb-1" href="/categories#Technology">Technology (3)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Cloud">Cloud (3)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#GCP">GCP (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Certification">Certification (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#GCP-Architect">GCP Architect (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#GCP-Data-Engineer">GCP Data Engineer (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#GCP-Security-Engineer">GCP Security Engineer (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#GCP-Network-Engineer">GCP Network Engineer (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#GCP-Developer">GCP Developer (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#GCP-Associate-Engineer">GCP Associate Engineer (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Azure">Azure (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#DP-200">DP-200 (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#BigQuery">BigQuery (1)</a>
+                
+            
+            
+		</div>
+	</div>
+</div>
+
+<!-- Begin Footer
+================================================== -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 text-center text-lg-left">
+                Copyright © 2020 Anil Khichar 
+            </div>
+            <div class="col-md-6 col-sm-6 text-center text-lg-right">    
+                <a target="_blank" href="https://www.youtube.com/channel/UCGGdRyg-737KtGisFe4cMTw"> DataScienceAIML</a>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End Footer
+================================================== -->
+
+</div> <!-- /.site-content -->
+
+<!-- Scripts
+================================================== -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+<script src="/assets/js/mediumish.js"></script>
+
+
+
+<script src="/assets/js/ie10-viewport-bug-workaround.js"></script> 
+
+
+<script id="dsq-count-scr" src="//anilkhichar-com.disqus.com/count.js"></script>
+
+
+</body>
+</html>

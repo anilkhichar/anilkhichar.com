@@ -1,30 +1,401 @@
----
-layout: null
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ site.title | xml_escape }}</title>
-    <description>{{ site.description | xml_escape }}</description>
-    <link>{{ site.url }}{{ site.baseurl }}/</link>
-    <atom:link href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
-    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
-    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
-    <generator>Jekyll v{{ jekyll.version }}</generator>
-    {% for post in site.posts limit:10 %}
+    <title>Hands on Coding</title>
+    <description>Principal Technical Architect (6X GCP/5X Azure)</description>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 06 Oct 2020 08:32:58 -0400</pubDate>
+    <lastBuildDate>Tue, 06 Oct 2020 08:32:58 -0400</lastBuildDate>
+    <generator>Jekyll v3.9.0</generator>
+    
       <item>
-        <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.content | xml_escape }}</description>
-        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-        <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
-        <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
-        {% for tag in post.tags %}
-        <category>{{ tag | xml_escape }}</category>
-        {% endfor %}
-        {% for cat in post.categories %}
-        <category>{{ cat | xml_escape }}</category>
-        {% endfor %}
+        <title>Now Google BigQuery is truly enterprise-ready DW (DML without limits; Integer range partitioning)</title>
+        <description>&lt;p&gt;I have been using BigQuery for a couple of years and designing/migrating enterprise data warehouses but the new announcement on &lt;a href=&quot;https://cloud.google.com/bigquery/docs/creating-integer-range-partitions&quot;&gt;limitless DML&lt;/a&gt; inspired me to write about its beauty.&lt;/p&gt;
+
+&lt;p&gt;I do have strong hands-on experience with on-prem traditional data warehouse &amp;amp; data warehousing across cloud providers (Redshift, SQL Data Warehouse a.k.a. Synapse). I always considered Google BigQuery as the next generation DW but following two nonexistence bothering me all the time:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Limited DML operations:&lt;/strong&gt; It’s limitless now since Feb 26, 2020 &lt;a href=&quot;https://cloud.google.com/blog/products/data-analytics/dml-without-limits-now-in-bigquery?utm_source=feedburner&amp;amp;utm_medium=email&amp;amp;utm_campaign=Feed:%2Bgoogleblog%2FCNkG%2B%28Google%2BCloud%2BPlatform%2BBlog%29&quot;&gt;announcement&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Date only partition&lt;/strong&gt;: It used to support Date &amp;amp; Timestamp(it is an illusion, practically it’s also a date partition). Now BigQuery also supports tables &lt;a href=&quot;https://cloud.google.com/bigquery/docs/creating-integer-range-partitions&quot;&gt;partitioned on an integer column&lt;/a&gt; as well. I hope in the near future there will be more partitioning options like the oracle.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;DML was always a struggle while migrating data from traditional enterprise data warehouses and especially dealing with the CDC(change data capture). In my recent Oracle EDW migration to BigQuery, managing update/delete on the new CDC was a big challenge.&lt;/p&gt;
+
+&lt;p&gt;Top 10 BigQuery features which I do consider it is the next generation EDW:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Quick setup &amp;amp; the most cost-effective DW&lt;/li&gt;
+  &lt;li&gt;Fully managed and server-less&lt;/li&gt;
+  &lt;li&gt;Scales on-demand from gigabytes to petabytes&lt;/li&gt;
+  &lt;li&gt;Seamless access due to data replication so the data is always available&lt;/li&gt;
+  &lt;li&gt;Automatic snapshots and data backup reduces worries about unexpected data changes&lt;/li&gt;
+  &lt;li&gt;Encrypted, durable, and highly available&lt;/li&gt;
+  &lt;li&gt;Built-in machine learning for predictive analytics&lt;/li&gt;
+  &lt;li&gt;In-memory BI Engine for blazing-fast reporting&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;figure class=&quot;figure-caption&quot;&gt;
+  
+  &lt;img class=&quot;featured-image img-fluid&quot; src=&quot;/assets/images/now-bq-enterprise-dw_2.png&quot; alt=&quot;&quot; /&gt;
+  
+  &lt;figcaption&gt;
+      &lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;
+      &lt;/a&gt;
+    This is why it’s the leader in DW
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;9. This is how BigQuery removes the traditional data warehousing barriers:&lt;/p&gt;
+
+&lt;figure class=&quot;figure-caption&quot;&gt;
+  
+  &lt;img class=&quot;featured-image img-fluid&quot; src=&quot;/assets/images/now-bq-enterprise-dw_3.png&quot; alt=&quot;&quot; /&gt;
+  
+  &lt;figcaption&gt;
+      &lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;
+      &lt;/a&gt;
+    This is why it’s the leader in DW
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;10. Real-time insights: Insert up to 100,000 rows of data per second and analyze business events as they unfold.&lt;/p&gt;
+
+&lt;p&gt;Read more about BigQuery &lt;a href=&quot;https://cloud.google.com/bigquery&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Happy coding &amp;amp; keep spreading happiness and kindness :)&lt;/p&gt;
+</description>
+        <pubDate>Thu, 05 Mar 2020 00:00:00 -0500</pubDate>
+        <link>/Now-Google-BigQuery-is-truly-enterprise-ready-DW-DML-without-limits-Integer-range-partitioning/</link>
+        <guid isPermaLink="true">/Now-Google-BigQuery-is-truly-enterprise-ready-DW-DML-without-limits-Integer-range-partitioning/</guid>
+        
+        <category>Lifelong Learning</category>
+        
+        <category>Cloud</category>
+        
+        <category>GCP</category>
+        
+        <category>BigQuery</category>
+        
+        <category>New Feaure</category>
+        
+        
+        <category>Technology</category>
+        
+        <category>Cloud</category>
+        
+        <category>GCP</category>
+        
+        <category>BigQuery</category>
+        
       </item>
-    {% endfor %}
+    
+      <item>
+        <title>One-Stop Azure Cert Guide for a GCP Professional: Microsoft Azure Certification DP-200: Implementing an Azure Data Solution</title>
+        <description>&lt;p&gt;As a Technical Architect at &lt;a href=&quot;https://www.mediaagility.com/&quot;&gt;MediaAgility&lt;/a&gt;, I refined my approach to designing new customer solutions for large enterprises, and I got more inclined to learning, not just studying and memorizing.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Why I chose Azure Learning:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;In the last two years, I designed GCP solutions for almost five enterprises and the common fact was, every enterprise was using/(willing to use) a hybrid cloud strategy regardless of their industry &amp;amp; service. And the compelling reason was no-vendor locking &amp;amp; utilize the best services across cloud providers and stay in the front line of their competition.&lt;/p&gt;
+
+&lt;p&gt;I am extensively working on GCP but at the same time taking care of Azure &amp;amp; AWS intersections. After completing &lt;a href=&quot;https://medium.com/@khichar.anil/my-6x-google-cloud-certification-journey-dfca1abdaacc&quot;&gt;My 6X Google Cloud Certification Journey&lt;/a&gt;, I decided to start with Azure to gain more in-depth knowledge.&lt;/p&gt;
+
+&lt;h3 id=&quot;dp-200-journey&quot;&gt;DP-200 Journey:&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Brief:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;At the start of 2019, Microsoft released two Azure Data exams: &lt;a href=&quot;https://www.microsoft.com/en-us/learning/exam-DP-200.aspx&quot;&gt;Implementing an Azure Data Solution&lt;/a&gt; (DP-200) and &lt;a href=&quot;https://www.microsoft.com/en-us/learning/exam-DP-201.aspx&quot;&gt;Designing an Azure Data Solution&lt;/a&gt; (DP-201). If you pass &lt;em&gt;both&lt;/em&gt; of these exams, you become a Microsoft Certified &lt;a href=&quot;https://www.microsoft.com/en-us/learning/azure-data-engineer.aspx&quot;&gt;Azure Data Engineer Associate&lt;/a&gt;.&lt;/p&gt;
+
+&lt;figure class=&quot;figure-caption&quot;&gt;
+  
+  &lt;img class=&quot;featured-image img-fluid&quot; src=&quot;/assets/images/dp-200-cert.png&quot; alt=&quot;&quot; /&gt;
+  
+  &lt;figcaption&gt;
+      &lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;
+      &lt;/a&gt;
+    At the end of 2019 I started learning Azure and on January 4th, 2020, I got recognition as a &lt;strong&gt;Microsoft Certified: Azure Data Engineer Associate.!!&lt;/strong&gt;
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;steps&quot;&gt;&lt;strong&gt;Steps:&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Reverse engineering&lt;/strong&gt; &lt;a href=&quot;https://cloud.google.com/docs/compare/azure&quot;&gt;Google Cloud for Azure professionals&lt;/a&gt;: This guide compares Google Cloud with Azure and highlights the similarities and differences between the two. In addition, the guide provides quick-reference mappings of Azure products, concepts, and terminology to the corresponding products, concepts, and terminology on Google Cloud.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.microsoft.com/en-us/learn/certifications/exams/dp-200?wt.mc_id=learningredirect_certs-web-wwl&quot;&gt;&lt;strong&gt;Gold&lt;/strong&gt;&lt;/a&gt; &lt;strong&gt;content at Microsoft learning path:&lt;/strong&gt; In my opinion, this is the best learning resource of all. The estimated total time for all of the following modules was around &lt;strong&gt;30 hours&lt;/strong&gt;. However, I ended up around &lt;strong&gt;100 hours&lt;/strong&gt; to cover hands-on experiments&lt;strong&gt;.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.microsoft.com/learn/paths/azure-for-the-data-engineer/&quot;&gt;Azure&lt;/a&gt; for the Data Engineer&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.microsoft.com/learn/paths/store-data-in-azure/&quot;&gt;Store&lt;/a&gt; data in Azure&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.microsoft.com/learn/paths/work-with-relational-data-in-azure/&quot;&gt;Work&lt;/a&gt; with relational data in Azure&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.microsoft.com/learn/paths/work-with-nosql-data-in-azure-cosmos-db/&quot;&gt;Work&lt;/a&gt; with NoSQL data in Azure Cosmos DB&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.microsoft.com/learn/paths/data-processing-with-azure-adls/&quot;&gt;Large&lt;/a&gt; Scale Data Processing with Azure Data Lake Storage Gen2&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.microsoft.com/learn/paths/implement-data-streaming-with-asa/&quot;&gt;Implement&lt;/a&gt; a Data Streaming Solution with Azure Streaming Analytics&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.microsoft.com/learn/paths/implement-sql-data-warehouse/&quot;&gt;Implement&lt;/a&gt; a Data Warehouse with Azure Synapse Analytics&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.microsoft.com/learn/paths/data-engineering-with-databricks/&quot;&gt;Perform&lt;/a&gt; data engineering with Azure Databricks&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.microsoft.com/learn/paths/data-science/&quot;&gt;Extract&lt;/a&gt; knowledge and insights from your data with Azure Databricks&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;figure-caption&quot;&gt;
+  
+  &lt;img class=&quot;featured-image img-fluid&quot; src=&quot;/assets/images/dp-200-cert-bookmark.png&quot; alt=&quot;&quot; /&gt;
+  
+  &lt;figcaption&gt;
+      &lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;
+      &lt;/a&gt;
+    My personalized bookmark list, out of this long learning path :)
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;3. &lt;strong&gt;Notes&lt;/strong&gt;: I took some useful notes in Evernote which I need to consolidate and share in a public Git Repo. If anyone is interested, then please write in the comments below or find me on &lt;a href=&quot;https://www.linkedin.com/in/anilkhichar/&quot;&gt;LinkedIn&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;4. &lt;strong&gt;Must-read content:&lt;/strong&gt; This was my revision list which can make you the winner if you were about to lose the nearline race. If you are well prepared and wants to cover last day content, here it is:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;4.a. Implement Data Storage Solutions:&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;CosmosDB&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Understand CosmosDB &lt;a href=&quot;https://docs.microsoft.com/en-us/azure/cosmos-db/use-cases&quot;&gt;use cases&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;It’s really important to know the &lt;a href=&quot;https://docs.microsoft.com/en-us/learn/modules/choose-api-for-cosmos-db/3-analyze-the-decision-criteria&quot;&gt;decision criteria&lt;/a&gt; for CosmosDB APIs.&lt;/li&gt;
+  &lt;li&gt;Deep dive into Cosmos DB &lt;a href=&quot;https://azure.microsoft.com/en-us/blog/azure-cosmos-db-partitioning-design-patterns-part-1/&quot;&gt;partitioning&lt;/a&gt; and learn about query performance tuning like deciding the partitioning key, creating lookup collection, etc.&lt;/li&gt;
+  &lt;li&gt;Perceive the intended meaning of Cosmos DB &lt;a href=&quot;https://docs.microsoft.com/en-us/azure/cosmos-db/request-units&quot;&gt;request units&lt;/a&gt;(RUs) so that you can save the cost and estimate the amount of RU for a particular workload.&lt;/li&gt;
+  &lt;li&gt;Implement a &lt;a href=&quot;https://docs.microsoft.com/en-us/azure/cosmos-db/lambda-architecture&quot;&gt;lambda architecture&lt;/a&gt; on the Azure platform. Get a clear understanding of which service to use while following this approach like Apache Spark vs Apache Hadoop etc.&lt;/li&gt;
+  &lt;li&gt;Understand &lt;a href=&quot;https://hadoop.apache.org/docs/r1.2.1/hdfs_design.html#NameNode+and+DataNodes&quot;&gt;HDFS architecture&lt;/a&gt; and get a clear understanding and use cases about Primary, Secondary, NameNode &amp;amp; DataNode.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;Storage&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Manage the Azure Blob &lt;a href=&quot;https://docs.microsoft.com/en-us/azure/storage/blobs/storage-lifecycle-management-concepts?tabs=azure-portal&quot;&gt;storage lifecycle&lt;/a&gt;. Experiment the mentioned example in this post about applying a lifecycle policy. &lt;strong&gt;&lt;em&gt;hands-on&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Learn about &lt;a href=&quot;https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-access-control&quot;&gt;Access control&lt;/a&gt; in Azure Data Lake Storage Gen2. Pay special attention to Azure AD setup while applying ACLs. &lt;strong&gt;&lt;em&gt;hands-on&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Configure Azure &lt;a href=&quot;https://docs.microsoft.com/en-us/azure/storage/common/storage-network-security&quot;&gt;Storage firewalls&lt;/a&gt; and virtual networks. &lt;strong&gt;&lt;em&gt;hands-on&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;Azure SQL Server &amp;amp; SQL Server Data Warehouse (Synapse Analytics)&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.microsoft.com/en-us/azure/sql-database/sql-database-paas-vs-sql-server-iaas&quot;&gt;Which SQL&lt;/a&gt; option should I choose?&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.microsoft.com/en-us/azure/sql-database/sql-database-export&quot;&gt;Export&lt;/a&gt; an Azure SQL database to a BACPAC file. &lt;strong&gt;&lt;em&gt;hands-on&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Learn about how to secure sensitive data in a SQL database with database encryption by using the &lt;a href=&quot;https://docs.microsoft.com/en-us/azure/sql-database/sql-database-always-encrypted&quot;&gt;Always Encrypted&lt;/a&gt; wizard. &lt;strong&gt;&lt;em&gt;hands-on&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Experience Azure SQL Database &lt;a href=&quot;https://docs.microsoft.com/en-us/azure/sql-database/sql-database-threat-detection&quot;&gt;Advanced Threat Protection&lt;/a&gt; features &amp;amp; steps to enable it. &lt;strong&gt;&lt;em&gt;hands-on&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Experiment and enable &lt;a href=&quot;https://docs.microsoft.com/en-us/sql/t-sql/statements/create-external-file-format-transact-sql?view=sql-server-ver15&quot;&gt;TDE&lt;/a&gt; (Transparent Data Encryption) and keep a note on the steps: &lt;em&gt;Formula(memory trick)&lt;/em&gt;: MCED — Master Key, Certificate, Encryption &amp;amp; Apply encryption on the DB. &lt;strong&gt;&lt;em&gt;hands-on&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Do an experiment using &lt;a href=&quot;https://docs.microsoft.com/en-us/azure/sql-database/scripts/sql-database-create-and-configure-database-powershell&quot;&gt;Powershell&lt;/a&gt; &amp;amp; Azure &lt;a href=&quot;https://docs.microsoft.com/en-us/azure/cosmos-db/scripts/cli/sql/create&quot;&gt;cloud shell&lt;/a&gt;. &lt;strong&gt;&lt;em&gt;hands-on&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.microsoft.com/en-us/azure/sql-database/sql-database-firewall-configure&quot;&gt;IP firewall&lt;/a&gt; rules. &lt;strong&gt;&lt;em&gt;hands-on&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Read about &lt;a href=&quot;https://docs.microsoft.com/en-us/azure/sql-database/sql-database-dynamic-data-masking-get-started&quot;&gt;dynamic data masking&lt;/a&gt; for Azure SQL Database and Azure Synapse Analytics. Give special attention to the in-built masking functions &amp;amp; their appropriate usages (Default, Credit Card, Email, Random Number, Custom Text)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;Polybase&lt;/em&gt;&lt;/strong&gt;: Please execute this &lt;a href=&quot;https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store&quot;&gt;hands-on experiment&lt;/a&gt; multiple times to load the data from ADLS into WH and memorize all the steps in the correct sequence. &lt;em&gt;Formula(Memory trick):&lt;/em&gt; MCSFTL — Master, Credential, Source, File, Table, Load(CTAS). &lt;a href=&quot;https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/sql-data-warehouse/load-data-from-azure-blob-storage-using-polybase.md&quot;&gt;Load New York Taxicab dataset&lt;/a&gt; &lt;strong&gt;&lt;em&gt;hands-on&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;DW performance &lt;a href=&quot;https://docs.microsoft.com/en-us/archive/blogs/apsblog/azure-sql-dw-performance-ctaspartition-switching-vs-updatedelete&quot;&gt;benchmarking&lt;/a&gt;: This example demonstrates DW performance benchmarking and concluded to utilize a methodology of CTAS and partition switching in lieu of UPDATE and DELETE operations wherever possible. Get a full understanding of this fundamental approach. &lt;strong&gt;&lt;em&gt;hands-on&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;4.b. Manage and develop data processing:&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;Azure Data Factory&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Understand the difference between all the available &lt;a href=&quot;https://docs.microsoft.com/en-us/azure/data-factory/concepts-integration-runtime&quot;&gt;Integration runtime&lt;/a&gt;. Pay special attention to the self-hosted integration runtime.&lt;/li&gt;
+  &lt;li&gt;Azure Data Factory Copy Activity: Find out &lt;a href=&quot;https://docs.microsoft.com/en-us/azure/data-factory/copy-activity-schema-and-type-mapping&quot;&gt;schema mapping&lt;/a&gt; ways between source &amp;amp; sink. &lt;strong&gt;&lt;em&gt;hands-on&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;Storage &amp;amp; HDInsight&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Get in-depth knowledge of using Azure Data Lake Storage Gen2 for big data requirements. Also, learn about different &lt;a href=&quot;https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-data-scenarios&quot;&gt;Hadoop tools&lt;/a&gt; discussed in this article.&lt;/li&gt;
+  &lt;li&gt;Choose the correct &lt;a href=&quot;https://docs.microsoft.com/en-us/learn/modules/hdinsight-config-open-source-solution/index&quot;&gt;HDInsight Configuration&lt;/a&gt; to build open-source analytics solutions. Give special attention to the use cases and get a better understanding of when to use Storm vs Spark etc.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;Azure Databricks&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Learn about the technology &lt;a href=&quot;https://docs.microsoft.com/en-us/azure/architecture/data-guide/technology-choices/batch-processing&quot;&gt;choices for batch processing&lt;/a&gt; and what is the decision criteria to choose one over the others.&lt;/li&gt;
+  &lt;li&gt;ETL using Azure &lt;a href=&quot;https://docs.microsoft.com/en-us/azure/azure-databricks/databricks-extract-load-sql-data-warehouse#load-data-into-azure-sql-data-warehouse&quot;&gt;Databricks&lt;/a&gt;. Special attention to “Load data into Azure SQL Data Warehouse” &lt;strong&gt;&lt;em&gt;hands-on&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Experiment on different &lt;a href=&quot;https://docs.microsoft.com/en-us/azure/databricks/clusters/configure&quot;&gt;cluster configurations&lt;/a&gt;. &lt;strong&gt;&lt;em&gt;hands-on&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;Azure Stream Analytics&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.microsoft.com/en-us/azure/stream-analytics/stream-analytics-window-functions&quot;&gt;Window functions&lt;/a&gt;: You must know the practical difference between all the stream analytics windowing functions &amp;amp; their usage (Tumbling, Hopping, Sliding &amp;amp; Session windows). &lt;strong&gt;&lt;em&gt;hands-on&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Learn how to use &lt;a href=&quot;https://docs.microsoft.com/en-us/azure/stream-analytics/stream-analytics-use-reference-data&quot;&gt;lookup data&lt;/a&gt; in the Azure Stream Analytics in a data streaming pipeline. &lt;strong&gt;&lt;em&gt;hands-on&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Azure Stream Analytics on &lt;a href=&quot;https://docs.microsoft.com/en-us/azure/stream-analytics/stream-analytics-edge&quot;&gt;IoT Edge&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;4.c. Monitor and optimize data solutions:&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Understand the &lt;a href=&quot;https://docs.microsoft.com/en-us/azure/sql-database/sql-database-auditing&quot;&gt;SQL auditing&lt;/a&gt; features &amp;amp; do a hand-on experiment on who/when &amp;amp; what got accessed from the Azure SQL DB &amp;amp; WH? &lt;strong&gt;&lt;em&gt;hands-on&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Learn about enabling SQL server &lt;a href=&quot;https://docs.microsoft.com/en-us/azure/sql-database/sql-database-automatic-tuning-enable&quot;&gt;automatic tuning&lt;/a&gt; &amp;amp; give special attention towards the inheritance with tuning options like &lt;em&gt;Force Plan, Create Index &amp;amp; Drop Index.&lt;/em&gt; &lt;strong&gt;&lt;em&gt;hands-on&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Read &amp;amp; understand &lt;a href=&quot;https://docs.microsoft.com/en-us/azure/sql-database/sql-database-in-memory&quot;&gt;In-Memory&lt;/a&gt; technologies that improve performance without increasing the database service tier. &lt;strong&gt;&lt;em&gt;hands-on&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Understand the &lt;a href=&quot;https://docs.microsoft.com/en-us/azure/architecture/patterns/materialized-view&quot;&gt;materialized view&lt;/a&gt; design pattern and think about its uses to boost a slow-performing SQL query. &lt;strong&gt;&lt;em&gt;hands-on&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Learn how to enable and configure l&lt;a href=&quot;https://docs.microsoft.com/en-us/azure/sql-database/sql-database-metrics-diag-logging&quot;&gt;ogging of diagnostics&lt;/a&gt; telemetry for Azure SQL databases. Pay special attention to the metric storage options like Azure SQL Analytics, Azure Event Hubs &amp;amp; Azure Storage. &lt;strong&gt;&lt;em&gt;hands-on&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Imbibe &lt;a href=&quot;https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-performance-tuning-guidance&quot;&gt;ADLS Gen2 performance optimization&lt;/a&gt; techniques. Understand file sizing &amp;amp; data organization into folders.&lt;/li&gt;
+  &lt;li&gt;Discover &lt;a href=&quot;https://docs.microsoft.com/en-us/azure/data-factory/monitor-using-azure-monitor&quot;&gt;Azure data factory monitoring&lt;/a&gt; using Azure monitor and think about use cases like last quarter log analytics and find out different actionable trends. &lt;strong&gt;&lt;em&gt;hands-on&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Learn about &lt;a href=&quot;https://docs.microsoft.com/en-us/data-integration/gateway/service-gateway-high-availability-clusters&quot;&gt;on-premises HA data gateway&lt;/a&gt; cluster to avoid single points of failure and to load balance traffic across gateways in a cluster.&lt;/li&gt;
+  &lt;li&gt;Understand the use of Azure Log Analytics to &lt;a href=&quot;https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-oms-log-analytics-tutorial&quot;&gt;monitor HDInsight&lt;/a&gt; clusters. Pay special attention to “Install HDInsight cluster management solutions”. &lt;strong&gt;&lt;em&gt;hands-on&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;…&lt;/p&gt;
+
+&lt;p&gt;Core mantra has to be: &lt;strong&gt;Never target for certification, rather understand the platform &amp;amp; technology&lt;/strong&gt;, because this will help us to design better solutions for our customers and perform our work in a qualitative manner. These are the perks of being a lifelong learner.&lt;/p&gt;
+
+&lt;p&gt;In this post, I shared all the resources that I found and used. &lt;strong&gt;Always check the latest official information from Microsoft before your exam.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Prepare well and all the best for the exam!&lt;/p&gt;
+</description>
+        <pubDate>Wed, 04 Mar 2020 00:00:00 -0500</pubDate>
+        <link>/One-Stop-Azure-Cert-Guide-for-a-GCP-Professional-Microsoft-Azure-Certification-DP-200/</link>
+        <guid isPermaLink="true">/One-Stop-Azure-Cert-Guide-for-a-GCP-Professional-Microsoft-Azure-Certification-DP-200/</guid>
+        
+        <category>Certification</category>
+        
+        <category>Lifelong Learning</category>
+        
+        <category>Cloud</category>
+        
+        <category>Cloud Certification</category>
+        
+        <category>Azure Certification</category>
+        
+        
+        <category>Technology</category>
+        
+        <category>Cloud</category>
+        
+        <category>Azure</category>
+        
+        <category>Certification</category>
+        
+        <category>DP-200</category>
+        
+      </item>
+    
+      <item>
+        <title>My 6X Google Cloud Certification Journey</title>
+        <description>&lt;p&gt;As a Senior Technical Architect at &lt;a href=&quot;https://www.mediaagility.com/&quot;&gt;MediaAgility&lt;/a&gt;, I have over a decade of deep technical and procedural knowledge in IT, data science, analytics, AI, and Google Cloud.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;I became 6X Google Cloud certified in slightly over a year.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;These were the first exams I sat down to study for since my graduation in 2009.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;My initial aim wasn’t to get these many certifications, but when the benefits started to show, I realized that these are not just about getting these 6 certificates from Google. I could see that my thinking and approach got more methodical, I started to work on GCP projects at my company, I refined my approach to designing new customer solutions for large enterprises, and I got more inclined to learning, not just studying and memorizing.&lt;/p&gt;
+
+&lt;figure class=&quot;figure-caption&quot;&gt;
+  
+  &lt;img class=&quot;featured-image img-fluid&quot; src=&quot;/assets/images/gcp-certified.png&quot; alt=&quot;&quot; /&gt;
+  
+  &lt;figcaption&gt;
+      &lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;
+      &lt;/a&gt;
+    here I am :)
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;If I have to summarize my experience of passing each of the Google Cloud certification exam in one line, then it has to be what Mahatma Gandhi said: “Live as if you were to die tomorrow, learn as if you were to live forever”.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;My recommendation to my fellow developers will be to appear for these Google certification exams because they have the potential to improve our work and the impact it has on the projects we consult on.&lt;/p&gt;
+
+&lt;p&gt;Through this post, I will try to handover all the learning and tips from my exam preparation days. For curriculum content, I sticked to Coursera, QwikLabs, and Google documentation and that was enough.&lt;/p&gt;
+
+&lt;h3 id=&quot;further-my-common-preparation-pattern-across-all-6-certs-was-asfollows&quot;&gt;Further, my common preparation pattern across all 6 certs was as follows:&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Read the &lt;a href=&quot;https://cloud.google.com/certification/&quot;&gt;Google Cloud certification website&lt;/a&gt; thoroughly. It has all the information to help us prepare. For instance, for the Associate certification (and also for all other certifications), you will find the &lt;a href=&quot;https://cloud.google.com/certification/cloud-engineer/&quot;&gt;exam overview&lt;/a&gt;, &lt;a href=&quot;https://cloud.google.com/certification/guides/cloud-engineer/&quot;&gt;guide&lt;/a&gt;, and &lt;a href=&quot;https://cloud.google.com/certification/practice-exam/cloud-engineer&quot;&gt;practice exams&lt;/a&gt;. You will also find additional resources under the ‘exam overview’ section. I will suggest going through the ‘exam overview’ and the ‘exam guide’ thoroughly to know the topics in the curriculum. This will help to set realistic expectations and draft a preparation strategy. There is also a &lt;a href=&quot;https://github.com/ddneves/awesome-gcp-certifications&quot;&gt;curated list of GCP resources&lt;/a&gt; by GitHub, that you might want to refer.&lt;/li&gt;
+  &lt;li&gt;Coursera, Linux Academy, and Cloud Guru — all offer course material for exam preparation. I studied from Coursera. If you choose Coursera, you must subscribe to &lt;a href=&quot;https://www.coursera.org/googlecloud&quot;&gt;Coursera for Google Cloud&lt;/a&gt; and choose the specialization corresponding to your target exam. Here is a list of the Coursera specialization/courses against the certifications:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Certification Name | Specialization Name&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Professional Cloud Architect | &lt;a href=&quot;https://www.coursera.org/specializations/gcp-architecture&quot;&gt;Architecting with Google Cloud Platform Specialization&lt;/a&gt; and &lt;a href=&quot;https://www.coursera.org/lecture/preparing-cloud-professional-cloud-architect-exam/introduction-qMLHZ&quot;&gt;Preparing for the Google Cloud Professional Cloud Architect Examination&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Professional Data Engineer | &lt;a href=&quot;https://www.coursera.org/specializations/gcp-data-machine-learning&quot;&gt;Data Engineering on Google Cloud Platform Specialization&lt;/a&gt; and &lt;a href=&quot;https://www.coursera.org/learn/preparing-cloud-professional-data-engineer-exam&quot;&gt;Preparing for the Google Cloud Professional Data Engineer Examination&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Professional Cloud Developer | &lt;a href=&quot;https://www.coursera.org/specializations/developing-apps-gcp?utm_source=googlecloud&amp;amp;utm_medium=institutions&amp;amp;utm_campaign=GoogleCloud_Training_AppDev_Specialization&quot;&gt;Developing Applications with Google Cloud Platform&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Professional Cloud Security Engineer | &lt;a href=&quot;https://www.coursera.org/specializations/security-google-cloud-platform/?utm_source=googlecloud&amp;amp;utm_medium=institutions&amp;amp;utm_campaign=GoogleCloud_PCSE_Security&quot;&gt;Security in Google Cloud Platform&lt;/a&gt; and &lt;a href=&quot;https://www.coursera.org/learn/gcp-fundamentals/?utm_source=googlecloud&amp;amp;utm_medium=institutions&amp;amp;utm_campaign=GoogleCloud_Training_Security&quot;&gt;Google Cloud Platform Fundamentals: Core Infrastructure&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Professional Cloud Network Engineer | &lt;a href=&quot;https://www.coursera.org/specializations/networking-google-cloud-platform?utm_source=googlecloud&amp;amp;utm_medium=institutions&amp;amp;utm_campaign=GoogleCloud_Training_Networking_Specialization&quot;&gt;Networking in Google Cloud Platform Specialization&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Associate Cloud Engineer | &lt;a href=&quot;https://www.coursera.org/specializations/gcp-architecture&quot;&gt;Architecting with Google Cloud Platform Specialization&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This will be my suggestion for studying from Coursera:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Watch every video. I preferred playing the videos at 1.5x speed and after a couple of them, I went for 1.75x speed. I did it since the topics were known to me and most of them needed just brushing up.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;PRO TIP:&lt;/strong&gt; If you find something interesting, take screenshots using &lt;a href=&quot;https://www.awesomescreenshot.com/&quot;&gt;awesome-screenshot&lt;/a&gt; chrome plugin. I recommend this plugin since it creates a Google Drive folder where these snaps get saved automatically. These were my personal notes that I used for revision.&lt;/li&gt;
+  &lt;li&gt;Answer every questionnaire that pops after the modules with complete dedication as if you were appearing for the exams.&lt;/li&gt;
+  &lt;li&gt;Perform &lt;a href=&quot;https://google.qwiklabs.com/&quot;&gt;QwikLabs&lt;/a&gt;’s practice lab religiously. These will come at the end of every module. QwikLabs provides real cloud environments that help developers and IT professionals learn cloud platforms and software.&lt;/li&gt;
+  &lt;li&gt;My personal goal was always to finish a one-week Coursera module in a single day. That was a goal that worked for me, you need not be necessarily doing it. Consistency is the key and it eventually leads to speed. Speed shouldn’t be the primary preparation strategy.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;3. Check your readiness&lt;/strong&gt;: You can take mock practice exams to evaluate your preparation. The Google Cloud certification site has all the links to the practice exams and resources — this is a directory for the exams, it has all the required information. A score of anything equal to or more than 17 out of 20 is a good score. Please don’t forget to analyze your answers and the explanation that is displayed on the result screen. Read GCP documentation links that are suggested after the exam. This is the last step before you &lt;a href=&quot;https://cloud.google.com/certification/register/&quot;&gt;register&lt;/a&gt; and &lt;a href=&quot;https://www.webassessor.com/googlecloud/&quot;&gt;schedule&lt;/a&gt; your exam.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;However, if your score is below 17, you will need more analysis and work. Note down the wrong answers and prepare a list of topics that are pulling your score down. Carefully read and understand every GCP documentation link that is provided to you on the result screen. Do more hands-on exercises on certification-specific QwikLabs quests (for instance, for Cloud Architect exam, this is the &lt;a href=&quot;https://google.qwiklabs.com/courses/844?utm_source=gcp&amp;amp;utm_medium=site&amp;amp;utm_campaign=certification&quot;&gt;quest&lt;/a&gt;). Focus on your weak areas more. Then once again, come back and check your readiness. Repeat this till your score is more than 17.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;On the exam day, revise your own notes from Google Drive. Prepare yourself mentally to take the challenge head-on and don’t get flustered.&lt;/p&gt;
+
+&lt;p&gt;…&lt;/p&gt;
+
+&lt;p&gt;Even though my personal goal was to score 17 or above, I still strongly believe these exams are not the ultimate goal. These are means to the ultimate goal of becoming better at what we like to do.&lt;/p&gt;
+
+&lt;p&gt;Core mantra has to be: &lt;strong&gt;Never target for certification, rather understand the platform &amp;amp; technology&lt;/strong&gt;, because this will help us to design better solutions for our customers and perform our work in a qualitative manner. These are the perks of being a lifelong learner.&lt;/p&gt;
+
+&lt;p&gt;Prepare well and all the best for the exam!&lt;/p&gt;
+</description>
+        <pubDate>Fri, 15 Nov 2019 00:00:00 -0500</pubDate>
+        <link>/My-6X-Google-Cloud-Certification-Journey/</link>
+        <guid isPermaLink="true">/My-6X-Google-Cloud-Certification-Journey/</guid>
+        
+        <category>red</category>
+        
+        <category>yellow</category>
+        
+        
+        <category>Technology</category>
+        
+        <category>Cloud</category>
+        
+        <category>GCP</category>
+        
+        <category>Certification</category>
+        
+        <category>GCP Architect</category>
+        
+        <category>GCP Data Engineer</category>
+        
+        <category>GCP Security Engineer</category>
+        
+        <category>GCP Network Engineer</category>
+        
+        <category>GCP Developer</category>
+        
+        <category>GCP Associate Engineer</category>
+        
+      </item>
+    
   </channel>
 </rss>
