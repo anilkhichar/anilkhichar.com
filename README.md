@@ -1,17 +1,17 @@
 # https://www.anilkhichar.com/ (Mediumish - Jekyll Theme)
 
-[Live Demo](https://www.anilkhichar.com/) &nbsp; | &nbsp; [Download](https://github.com/hianil/anilkhichar.com/archive/master.zip) &nbsp; | &nbsp; [Documentation](https://bootstrapstarter.com/bootstrap-templates/template-mediumish-bootstrap-jekyll/)
+[Live Demo](https://www.anilkhichar.com/) &nbsp; | &nbsp; [Download](https://github.com/anilkhichar/anilkhichar.com/archive/master.zip) &nbsp; | &nbsp; [Documentation](https://bootstrapstarter.com/bootstrap-templates/template-mediumish-bootstrap-jekyll/)
 
 ### How to use “Mediumish” theme
-1. [Clone the code repo](https://github.com/hianil/anilkhichar.com)
+1. [Clone the code repo](https://github.com/anilkhichar/anilkhichar.com)
 ```
 mkdir blog && cd blog
-mkdir code && cd code && git clone https://github.com/hianil/anilkhichar.com.git
+mkdir code && cd code && git clone https://github.com/anilkhichar/anilkhichar.com.git
 ```
 
 2. [Clone the github pages branch](https://pages.github.com/)
 ```
-cd ../ && mkdir app && cd app && git clone https://github.com/hianil/anilkhichar.com.git 
+cd ../ && mkdir app && cd app && git clone https://github.com/anilkhichar/anilkhichar.com.git 
 cd anilkhichar.com && git fetch --all && git checout gh-pages
 ```
 
