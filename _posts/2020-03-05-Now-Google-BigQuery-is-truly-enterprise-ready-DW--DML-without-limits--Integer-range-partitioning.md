@@ -5,7 +5,7 @@ title:  "Now Google BigQuery is truly enterprise-ready DW (DML without limits; I
 author: anil
 categories: [ Technology, Cloud, GCP, BigQuery ]
 tags: [Lifelong Learning, Cloud, GCP, BigQuery, New Feaure]
-image: assets/images/now-bq-enterprise-dw_1.jpg
+image: assets/images/posts/now-bq-enterprise-dw_1.jpg
 image-caption: Power of BigQuery
 description: "I have been using BigQuery for a couple of years and designing/migrating
   enterprise data warehouses but the new announcement on limitless"

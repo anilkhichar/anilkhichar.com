@@ -4,7 +4,7 @@ title:  "My 6X Google Cloud Certification Journey"
 author: anil
 categories: [ Technology, Cloud, GCP, Certification, GCP Architect, GCP Data Engineer, GCP Security Engineer,GCP Network Engineer, GCP Developer, GCP Associate Engineer ]
 tags: [red, yellow]
-image: assets/images/certified-featured.jpg
+image: assets/images/posts/certified-featured.jpg
 image-caption: "#LifelongLearning: Understanding the platform & technology, over just getting certified"
 description: "#LifelongLearning: Understanding the platform & technology, over just getting certified"
 featured: true

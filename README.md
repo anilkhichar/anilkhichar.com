@@ -28,6 +28,26 @@ cd anilkhichar.com && git fetch --all && git checout gh-pages
 4. Commit, push and open a pull request on GitHub. This is the branch code which will get deployed on the website.
 
 
+## Medium to Jekyll automated conversion
+Reference: https://github.com/gautamdhameja/medium-2-md
+
+Steps:
+1. Convert medium posts (html) into Jekyll compatible markdown files and move them into app code.
+```
+cd blog
+
+medium-2-md convertLocal medium-export/posts -fi 
+
+mv medium-export/posts/md_*/*.md code/anilkhichar.com/_posts/ 
+
+mv medium-export/posts/md_*/img/* code/anilkhichar.com/assets/images/posts/
+```
+2. Rename **_posts/xyz.md** by replacing all underscores with hyphen. i.e.: `2020-10-12-GCP_Organization-Node-Setup--free-cloud-identity-122323sfdsdf.md` --> `2020-10-12-GCP-Organization-Node-Setup--free-cloud-identity.md`
+
+3. Rename new images with meaningful name.
+
+4. Compare new post with an existing post and replace top header.
+
 Thank you!
 
 ### Copyright

@@ -2,11 +2,11 @@
   {% if site.lazyimages == "enabled" %}
   <img class="featured-image img-fluid lazyimg"
       src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
-      data-src="{{ site.baseurl }}/assets/images/{{ include.img_name }}"
+      data-src="{{ site.baseurl }}/assets/images/posts/{{ include.img_name }}"
       alt="">
   {% else %}
   <img class="featured-image img-fluid"
-      src="{{ site.baseurl }}/assets/images/{{ include.img_name }}"
+      src="{{ site.baseurl }}/assets/images/posts/{{ include.img_name }}"
       alt="">
   {% endif %}
   <figcaption>

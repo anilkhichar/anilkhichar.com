@@ -5,7 +5,7 @@ author: anil
 
 categories: [ Technology, Cloud, Azure, Certification, DP-200 ]
 tags: [Certification, Lifelong Learning, Cloud, Cloud Certification, Azure Certification]
-image: assets/images/azure_certified.png
+image: assets/images/posts/azure_certified.png
 image-caption: "Image courtesy: Lambda Architecture using Azure"
 image-caption-url: "https://azure.microsoft.com/en-us/blog/lambda-architecture-using-azure-cosmosdb-faster-performance-low-tco-low-devops/"
 description: "As a Technical Architect at MediaAgility, I refined my approach to designing new customer solutions for large enterprises, and I got more…"
