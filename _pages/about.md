@@ -8,7 +8,7 @@ comments: false
 {% assign author = site.authors.anil %}
 
 
-<div>
+<div class="margin-bottom-2rem">
 <!-- start - email -->
 <img class="icon-img"
       src="{{ site.baseurl }}/assets/images/icon-gmail.png"
