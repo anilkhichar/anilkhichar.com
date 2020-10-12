@@ -13,6 +13,10 @@
 <lastmod>2020-03-05T00:00:00-05:00</lastmod>
 </url>
 <url>
+<loc>/GCP-Organization-Node-Setup-free-cloud-identity/</loc>
+<lastmod>2020-10-12T00:00:00-04:00</lastmod>
+</url>
+<url>
 <loc>/about</loc>
 </url>
 <url>
@@ -65,5 +69,11 @@
 </url>
 <url>
 <loc>/category/bigquery/</loc>
+</url>
+<url>
+<loc>/category/foundation/</loc>
+</url>
+<url>
+<loc>/category/orgnode/</loc>
 </url>
 </urlset>

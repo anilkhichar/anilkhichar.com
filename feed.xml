@@ -5,9 +5,95 @@
     <description>Principal Technical Architect (6X GCP/5X Azure)</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 11 Oct 2020 16:54:10 -0400</pubDate>
-    <lastBuildDate>Sun, 11 Oct 2020 16:54:10 -0400</lastBuildDate>
+    <pubDate>Mon, 12 Oct 2020 00:34:56 -0400</pubDate>
+    <lastBuildDate>Mon, 12 Oct 2020 00:34:56 -0400</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
+    
+      <item>
+        <title>GCP Organization Node Setup (free cloud identity)</title>
+        <description>&lt;h3 id=&quot;problem-statement&quot;&gt;&lt;strong&gt;Problem Statement:&lt;/strong&gt;&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;An organization node is available for &lt;strong&gt;G Suite&lt;/strong&gt; and &lt;strong&gt;Cloud Identity&lt;/strong&gt; customers. There is a lot of content about GCP org node but still, it’s not clear if a customer can start leveraging Org Node advantage without being a GSuite customer.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;It’s &lt;a href=&quot;https://cloud.google.com/resource-manager/docs/creating-managing-organization&quot;&gt;mentioned&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;You can use a&lt;/em&gt; &lt;a href=&quot;https://support.google.com/cloudidentity/answer/7319251?visit_id=636934455105255816-106820737&amp;amp;rd=1&quot;&gt;&lt;em&gt;free&lt;/em&gt;&lt;/a&gt; &lt;em&gt;Cloud Identity account to create an Organization resource.&lt;/em&gt; &lt;strong&gt;&lt;em&gt;Cloud Identity Free edition&lt;/em&gt;&lt;/strong&gt; &lt;em&gt;includes core identity and endpoint management services. It provides free, managed Google Accounts to users who don’t need G Suite Services, such as Gmail or Google Drive. You can use Cloud Identity accounts with other Google services, such as Google Cloud Platform (GCP), Chrome, Android enterprise, and a large catalog of third-party applications. Upgrade your feature set by signing up for the Cloud Identity Premium edition.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Cloud Identity is Free as well as Paid. GCP customers who don’t want to move to GSuite but want to use Google authentication/identity for GCP login can subscribe to Cloud Identity for free.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;But there is no free edition of&lt;/strong&gt; &lt;a href=&quot;https://cloud.google.com/identity/&quot;&gt;&lt;strong&gt;cloud identity&lt;/strong&gt;&lt;/a&gt;&lt;strong&gt;. Am I missing something?&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;The ideal&lt;/strong&gt; structure of an organization: Everyone wants to utilize this structure but sometimes customers feel shy to go with the GSuite route.&lt;br /&gt;
+References: &lt;a href=&quot;https://cloud.google.com/resource-manager/docs/cloud-platform-resource-hierarchy&quot;&gt;cloud-platform-resource-hierarchy&lt;/a&gt;, &lt;a href=&quot;https://cloud.google.com/docs/enterprise/best-practices-for-enterprise-organizations&quot;&gt;best-practices-for-enterprise-organizations&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/800/0*PAz0Q7GEh4Pi-40_.png&quot; alt=&quot;Example Google Cloud resource hierarchy&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Solution:&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Free cloud identity details:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://support.google.com/cloudidentity/answer/7389973&quot;&gt;&lt;strong&gt;Option A (If you already have a GCP project and want to connect this project with an org node):&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;figure class=&quot;figure-caption&quot;&gt;
+  
+  &lt;img class=&quot;featured-image img-fluid&quot; src=&quot;/assets/images/posts/gcp-signup-for-cloud-identity.png&quot; alt=&quot;&quot; /&gt;
+  
+  &lt;figcaption&gt;
+      &lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;
+      &lt;/a&gt;
+    
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;Option B (Setup Org node and then start migrating/connecting existing GCP projects):&lt;/strong&gt;&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/TlDW1up98Uc&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;strong&gt;Steps:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Free Cloud Identity Setup: &lt;a href=&quot;https://gsuite.google.com/signup/gcpidentity&quot;&gt;https://gsuite.google.com/signup/gcpidentity&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Verify domain ownership: &lt;a href=&quot;https://support.google.com/cloudidentity/answer/7331243?hl=en&quot;&gt;https://support.google.com/cloudidentity/answer/7331243?hl=en&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Continue with GCP Console&lt;/li&gt;
+  &lt;li&gt;GCP free account setup/Billing setup&lt;/li&gt;
+  &lt;li&gt;Folder management&lt;/li&gt;
+  &lt;li&gt;Organization Policy Overview&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;I hope this post will help in setting up a strong foundation pillar on GCP.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 12 Oct 2020 00:00:00 -0400</pubDate>
+        <link>/GCP-Organization-Node-Setup-free-cloud-identity/</link>
+        <guid isPermaLink="true">/GCP-Organization-Node-Setup-free-cloud-identity/</guid>
+        
+        <category>Lifelong Learning</category>
+        
+        <category>Cloud</category>
+        
+        <category>GCP</category>
+        
+        <category>Organization Setup</category>
+        
+        <category>Foundation</category>
+        
+        <category>Cloud Identity</category>
+        
+        
+        <category>Technology</category>
+        
+        <category>Cloud</category>
+        
+        <category>GCP</category>
+        
+        <category>Foundation</category>
+        
+        <category>OrgNode</category>
+        
+      </item>
     
       <item>
         <title>Now Google BigQuery is truly enterprise-ready DW (DML without limits; Integer range partitioning)</title>
@@ -37,7 +123,7 @@
 
 &lt;figure class=&quot;figure-caption&quot;&gt;
   
-  &lt;img class=&quot;featured-image img-fluid&quot; src=&quot;/assets/images/now-bq-enterprise-dw_2.png&quot; alt=&quot;&quot; /&gt;
+  &lt;img class=&quot;featured-image img-fluid&quot; src=&quot;/assets/images/posts/now-bq-enterprise-dw_2.png&quot; alt=&quot;&quot; /&gt;
   
   &lt;figcaption&gt;
       &lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;
@@ -50,7 +136,7 @@
 
 &lt;figure class=&quot;figure-caption&quot;&gt;
   
-  &lt;img class=&quot;featured-image img-fluid&quot; src=&quot;/assets/images/now-bq-enterprise-dw_3.png&quot; alt=&quot;&quot; /&gt;
+  &lt;img class=&quot;featured-image img-fluid&quot; src=&quot;/assets/images/posts/now-bq-enterprise-dw_3.png&quot; alt=&quot;&quot; /&gt;
   
   &lt;figcaption&gt;
       &lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;
@@ -108,7 +194,7 @@
 
 &lt;figure class=&quot;figure-caption&quot;&gt;
   
-  &lt;img class=&quot;featured-image img-fluid&quot; src=&quot;/assets/images/dp-200-cert.png&quot; alt=&quot;&quot; /&gt;
+  &lt;img class=&quot;featured-image img-fluid&quot; src=&quot;/assets/images/posts/dp-200-cert.png&quot; alt=&quot;&quot; /&gt;
   
   &lt;figcaption&gt;
       &lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;
@@ -138,7 +224,7 @@
 
 &lt;figure class=&quot;figure-caption&quot;&gt;
   
-  &lt;img class=&quot;featured-image img-fluid&quot; src=&quot;/assets/images/dp-200-cert-bookmark.png&quot; alt=&quot;&quot; /&gt;
+  &lt;img class=&quot;featured-image img-fluid&quot; src=&quot;/assets/images/posts/dp-200-cert-bookmark.png&quot; alt=&quot;&quot; /&gt;
   
   &lt;figcaption&gt;
       &lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;
@@ -302,7 +388,7 @@
 
 &lt;figure class=&quot;figure-caption&quot;&gt;
   
-  &lt;img class=&quot;featured-image img-fluid&quot; src=&quot;/assets/images/gcp-certified.png&quot; alt=&quot;&quot; /&gt;
+  &lt;img class=&quot;featured-image img-fluid&quot; src=&quot;/assets/images/posts/gcp-certified.png&quot; alt=&quot;&quot; /&gt;
   
   &lt;figcaption&gt;
       &lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;
