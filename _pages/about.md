@@ -69,11 +69,11 @@ comments: false
       src="{{ site.baseurl }}/assets/images/gcp-certified-aboutme.png"
       alt="">
 <img class="featured-image img-fluid"
-      src="{{ site.baseurl }}/assets/images/qwiklabs-badges-aboutme.png"
+      src="{{ site.baseurl }}/assets/images/azure-certified-aboutme.png"
       alt="">
 
 <img class="featured-image img-fluid"
-      src="{{ site.baseurl }}/assets/images/azure-certified-aboutme.png"
+      src="{{ site.baseurl }}/assets/images/qwiklabs-badges-aboutme.png"
       alt="">
 <img class="featured-image img-fluid"
       src="{{ site.baseurl }}/assets/images/azure-badges-aboutme.png"
