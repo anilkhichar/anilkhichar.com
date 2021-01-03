@@ -8,7 +8,7 @@ var documents = [{
     "id": 1,
     "url": "/about",
     "title": "Problem Solver | Value Creator | Big Data| Hadoop | Data Analytics | ML | AI Platform | K8S | Anthos",
-    "body": "EmailLinkedInStackoverflowMediumGitHubAccredibleQwiklabsAzure "
+    "body": "EmailLinkedInStackoverflowMediumGitHubAccredibleQwiklabsAcclaim "
     }, {
     "id": 2,
     "url": "/categories",
