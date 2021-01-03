@@ -57,24 +57,28 @@ comments: false
 <a class="icon-href" target="_blank" href="{{ author.qwiklabs }}">Qwiklabs</a>
 <!-- end - qwiklabs -->
 
-<!-- start - azure -->
+<!-- start - acclaim -->
 <img class="icon-img"
-      src="{{ site.baseurl }}/assets/images/icon-azure.png"
-      alt="azure" >
-<a class="icon-href" target="_blank" href="{{ author.azure }}">Azure</a>
-<!-- end - azure -->
+      src="{{ site.baseurl }}/assets/images/icon-acclaim.png"
+      alt="acclaim" >
+<a class="icon-href" target="_blank" href="{{ author.acclaim }}">Acclaim</a>
+<!-- end - acclaim -->
+
 </div>
 
 <img class="featured-image img-fluid"
       src="{{ site.baseurl }}/assets/images/gcp-certified-aboutme.png"
-      alt="">
+      alt="gcp">
 <img class="featured-image img-fluid"
-      src="{{ site.baseurl }}/assets/images/azure-certified-aboutme.png"
-      alt="">
+      src="{{ site.baseurl }}/assets/images/azure-aws-certified-aboutme.png"
+      alt="azure-aws">
+<img class="featured-image img-fluid"
+      src="{{ site.baseurl }}/assets/images/uc-san-diego_hadoop-certified-aboutme.png"
+      alt="hadoop">
 
 <img class="featured-image img-fluid"
       src="{{ site.baseurl }}/assets/images/qwiklabs-badges-aboutme.png"
-      alt="">
+      alt="qwiklabs">
 <img class="featured-image img-fluid"
       src="{{ site.baseurl }}/assets/images/azure-badges-aboutme.png"
-      alt="">
+      alt="azure">

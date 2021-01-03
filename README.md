@@ -12,12 +12,12 @@ mkdir code && cd code && git clone https://github.com/anilkhichar/anilkhichar.co
 2. [Clone the github pages branch](https://pages.github.com/)
 ```
 cd ../ && mkdir app && cd app && git clone https://github.com/anilkhichar/anilkhichar.com.git 
-cd anilkhichar.com && git fetch --all && git checout gh-pages
+cd anilkhichar.com && git fetch --all && git checkout gh-pages
 ```
 
 ### Development
 
-1. `cd blog/code && sudo gem install bundler && sudo bundle install`
+1. `cd blog/code/anilkhichar.com && sudo gem install bundler && sudo bundle install`
 2. `bundle exec jekyll serve --watch`
 3. Go to your browser: [http://127.0.0.1:4000/index.html](http://127.0.0.1:4000/index.html)
 
